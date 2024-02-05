@@ -1,7 +1,8 @@
 import React from 'react';
 import { VscGear } from 'react-icons/vsc';
+import { ROUTES } from "../utilities/routes.js";
 
-function Generator() {
+function Generator({setPage}) {
   return (
     <div className="flex flex-col">
         <div className="flex flex-row justify-between mx-5 my-3 items-center">
@@ -9,7 +10,7 @@ function Generator() {
                 Generate
             </button>
             <h2 className="text-2xl font-bold">LinkedIn Cover Letter Generator</h2>
-            <button className="border mr-[1px] p-2 border-solid border-gray-600 rounded-[100%] hover:bg-gray-200 hover:border-2 hover:mr-0 transition duration-300 ease-in-out">
+            <button onClick={() => {setPage(ROUTES.PROFILE);}} className="border mr-[1px] p-2 border-solid border-gray-600 rounded-[100%] hover:bg-gray-200 hover:border-2 hover:mr-0 transition duration-300 ease-in-out">
                 <VscGear />
             </button>
         </div>

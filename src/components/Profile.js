@@ -1,13 +1,14 @@
 import React from 'react';
-import {MdArrowBack} from 'react-icons/md';
+import { MdArrowBack } from 'react-icons/md';
+import { ROUTES } from "../utilities/routes.js";
 
-function Profile() {
+function Profile({setPage}) {
   return (
     <div className="flex flex-col mx-5">
         <div className="flex flex-row justify-between mx-5 my-3 items-center">
         <h2 className="text-2xl font-bold">Profile</h2>
-        <button className="border mr-[1px] p-2 border-solid border-gray-600 rounded-[100%]">
-            <MdArrowBack className="text-[150%] text-gray-500"></MdArrowBack>
+        <button onClick={() => {setPage(ROUTES.GENERATOR);}} className="border mr-[1px] p-2 border-solid border-gray-600 rounded-[100%]">
+            <MdArrowBack className="text-[150%] text-gray-500"/>
         </button>
         </div>
         <form className="flex-col">
