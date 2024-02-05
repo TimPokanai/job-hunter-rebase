@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdArrowBack } from 'react-icons/md';
+import { saveData } from '../utilities/localStorage.js';
 import { ROUTES } from "../utilities/routes.js";
 
 function Profile({ setPage, resume, setResume, openAIKey, setOpenAIKey }) {
@@ -10,6 +11,8 @@ function Profile({ setPage, resume, setResume, openAIKey, setOpenAIKey }) {
     const updatedOpenAIKey = formData.get("openAIKey");
     setResume(updatedResume);
     setOpenAIKey(updatedOpenAIKey);
+    saveData("resume", updatedResume);
+    saveData("openAIKey", updatedOpenAIKey);
   };
 
   return (
