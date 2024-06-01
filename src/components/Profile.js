@@ -38,7 +38,7 @@ function Profile({ setPage, resume, setResume, openAIKey, setOpenAIKey }) {
                 <label htmlFor="resume" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Your Resume
                 </label>
-                <textarea id="resume" name="resume" rows={8} className="block p-2.5 w-full text-sm bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-grey-400 dark:text-white" placeholder="Paste Your Resume Here..." defaultValue={ resume } >           
+                <textarea id="resume" name="resume" rows={8} className="block p-2.5 w-full text-sm bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-grey-400 dark:text-white" placeholder="Paste Your Resume Here" defaultValue={ resume } >           
                 </textarea>
             </div>
             <div className="mb-6 text-center">
