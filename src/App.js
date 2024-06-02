@@ -5,7 +5,7 @@ import { loadData } from "./utilities/localStorage.js";
 import { ROUTES } from "./utilities/routes.js";
 
 function App() {
-  const [page, setPage] = useState();
+  const [page, setPage] = useState(ROUTES.GENERATOR);
   const [resume, setResume] = useState("Test Resume");
   const [openAIKey, setOpenAIKey] = useState("Test Key");
 
@@ -24,7 +24,7 @@ function App() {
   switch(page) {
     case ROUTES.GENERATOR:
       return <Generator 
-                setPage={setPage} 
+                setPage={setPage} resume={resume} openAIKey={openAIKey}
               />;
 
     case ROUTES.PROFILE:
@@ -38,7 +38,7 @@ function App() {
 
     default:
       return <Generator 
-                setPage={setPage} 
+                setPage={setPage} resume={resume} openAIKey={openAIKey}
               />;
     }
 }
